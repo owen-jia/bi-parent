@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bi-data-service/bi-data-service.iml" filepath="$PROJECT_DIR$/bi-data-service/bi-data-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bi-parent.iml" filepath="$PROJECT_DIR$/bi-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bi-web/bi-web.iml" filepath="$PROJECT_DIR$/bi-web/bi-web.iml" />
+    </modules>
+  </component>
+</project>

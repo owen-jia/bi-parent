@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  datasource:
+      url: jdbc:oracle:thin:@120.55.42.117:1521:jucaicat
+      username: bi
+      password: bi123
+      driver-class-name: oracle.jdbc.OracleDriver
+      type: com.alibaba.druid.pool.DruidDataSource
+logging:
+  level:
+    org.apache.ibatis: debug
+    springframework.web: debug
+    org.springboot.sample: debug
+
+

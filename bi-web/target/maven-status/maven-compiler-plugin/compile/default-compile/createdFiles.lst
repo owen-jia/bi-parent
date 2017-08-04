@@ -1,0 +1,8 @@
+com\jcc\bi\web\service\impl\DemoServiceImpl.class
+com\jcc\bi\web\WebApp.class
+com\jcc\bi\web\util\MyMapper.class
+com\jcc\bi\web\service\DemoService.class
+com\jcc\bi\web\model\dao\BiDemo.class
+com\jcc\bi\web\config\WebConfig.class
+com\jcc\bi\web\controller\DemoController.class
+com\jcc\bi\web\mapper\BiDemoMapper.class

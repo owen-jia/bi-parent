@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bi-web:war">
+    <output-path>$PROJECT_DIR$/bi-web/target</output-path>
+    <root id="archive" name="bi-web.war">
+      <element id="artifact" artifact-name="bi-web:war exploded" />
+    </root>
+  </artifact>
+</component>

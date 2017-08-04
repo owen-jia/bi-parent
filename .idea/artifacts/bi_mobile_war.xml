@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="bi-mobile:war">
+    <output-path>$PROJECT_DIR$/bi-mobile/target</output-path>
+    <root id="archive" name="bi-mobile.war">
+      <element id="artifact" artifact-name="bi-mobile:war exploded" />
+    </root>
+  </artifact>
+</component>
