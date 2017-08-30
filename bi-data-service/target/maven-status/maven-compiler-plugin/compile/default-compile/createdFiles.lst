@@ -1,8 +1,0 @@
-com\jcc\bi\data\controller\TestController.class
-com\jcc\bi\data\DataApp.class
-com\jcc\bi\data\model\dao\AAA.class
-com\jcc\bi\data\util\MyMapper.class
-com\jcc\bi\data\mapper\TestMapper.class
-com\jcc\bi\data\service\impl\TestServiceImpl.class
-com\jcc\bi\data\service\TestService.class
-com\jcc\bi\data\model\WebParam.class
