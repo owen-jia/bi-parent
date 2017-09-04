@@ -1,0 +1,15 @@
+spring:
+  profiles: dev
+  datasource:
+      url: jdbc:mysql://192.168.20.241:${MYSQL_PORT:3306}/${MYSQL_DB:bi_web}?autoReconnect=true
+      username: ${MYSQL_USER:root}
+      password: ${MYSQL_PASSWORD:123456}
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.alibaba.druid.pool.DruidDataSource
+logging:
+  level:
+    org.apache.ibatis: debug
+    springframework.web: debug
+    org.springboot.sample: debug
+
+
