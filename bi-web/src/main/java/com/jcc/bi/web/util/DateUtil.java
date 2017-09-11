@@ -1,6 +1,4 @@
-package com.d1m.popup.utils;
-
-import org.apache.commons.lang.StringUtils;
+package com.jcc.bi.web.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -28,10 +26,10 @@ public class DateUtil {
             "yyyyMMddHHmmss");
 
     public static Date parseString2Date(String date,String format){
-        if(StringUtils.isEmpty(date)){
+        if(date == null || date.length() <= 0){
             return null;
         }
-        if(StringUtils.isEmpty(format)){
+        if(format == null || format.length() <= 0){
             format = default_format;
         }
         try {

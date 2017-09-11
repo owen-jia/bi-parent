@@ -1,6 +1,4 @@
-package com.d1m.popup.utils;
-
-import org.apache.log4j.Logger;
+package com.jcc.bi.web.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,8 +28,6 @@ public class HttpUtils {
      * 请求编码
      */
     static String requestEncoding = "UTF-8";
-
-    static Logger logger = Logger.getLogger(HttpUtils.class);
 
     public static String doPost(String reqUrl, Map parameters,
                                 String recvEncoding) {
@@ -69,7 +65,7 @@ public class HttpUtils {
             rd.close();
             in.close();
         } catch (IOException e) {
-            logger.error("网络故障", e);
+            System.out.println("网络故障|" + e.getMessage());
         } finally {
             if (url_con != null) {
                 url_con.disconnect();
