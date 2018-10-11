@@ -1,6 +1,7 @@
 # bi-parent
 spring-boot_mybatis_mybatis-generater_mysql_orcale
-> project demo for jucaicat-bi group
+> sping-boot_1.5.6基础上构建基础Web项目
+
 
 ## 技术集成
 
@@ -9,4 +10,4 @@ spring-boot_mybatis_mybatis-generater_mysql_orcale
 * mybatis-generator
 * mysql & oracle
 * pagehelper
-* spring mvc & spring framework
+* spring mvc framework
