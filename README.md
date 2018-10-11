@@ -29,7 +29,7 @@ mybatis-generator集成在test目录下，执行命令： mvn mybatis-generator:
 * spring framework: mvc & common
 * dubbo-spring-boot-starter
 
-## 注意点
+## 文档链接
 
 1. spring-boot 2.0.5 文档地址：   
 https://docs.spring.io/spring-boot/docs/2.0.5.RELEASE/reference/htmlsingle/  
