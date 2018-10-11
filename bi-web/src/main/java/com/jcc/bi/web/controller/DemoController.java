@@ -1,8 +1,7 @@
 package com.jcc.bi.web.controller;
 
-import com.jcc.bi.web.config.MyException;
-import com.jcc.bi.web.model.Result;
-import com.jcc.bi.web.service.DemoService;
+import com.jcc.bi.data.service.TestService;
+import com.jcc.bi.data.service.dubbo.MemberInfoDubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,16 +12,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping(value = "demo")
 public class DemoController extends BaseController{
 
-    @Autowired
-    DemoService demoServiceImpl;
+    @Autowired(required = false)
+    TestService testService;
+    @Autowired(required = false)
+    MemberInfoDubboService memberInfoDubboService;
 
     @RequestMapping(value = "test1",method = RequestMethod.GET)
     @ResponseBody
-    public Result test1() throws MyException{
-        String tmp = demoServiceImpl.test1();
-        logger.info(tmp);
-
-        demoServiceImpl.test2();
-        return Result.successResult();
+    public String test1(){
+        memberInfoDubboService.test1();
+        return testService.test();
     }
 }

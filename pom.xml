@@ -4,10 +4,11 @@
 
     <groupId>com.jcc.bi</groupId>
     <artifactId>bi-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>2.0</version>
     <modules>
         <module>bi-web</module>
         <module>bi-data-service</module>
+        <module>bi-dubbo-api</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -15,61 +16,70 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>1.8</java.version>
+        <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
+        <mysql.version>5.1.38</mysql.version>
+        <druid.version>1.1.8</druid.version>
 
-        <spring.boot.version>1.5.6.RELEASE</spring.boot.version>
-        <mybatis.version>3.4.2</mybatis.version>
+        <mybatis-spring-boot-starter.version>1.3.2</mybatis-spring-boot-starter.version>
+        <pagehelper-spring-boot-starter.version>1.2.7</pagehelper-spring-boot-starter.version>
         <mapper.version>3.3.6</mapper.version>
-        <pagehelper.version>4.1.6</pagehelper.version>
-        <mysql.version>5.1.29</mysql.version>
-        <spring.version>4.3.7.RELEASE</spring.version>
-        <slf4j.version>1.7.6</slf4j.version>
-        <mybatis.spring.version>1.3.1</mybatis.spring.version>
-        <gson.version>2.2.4</gson.version>
-        <commons-codec.version>1.6</commons-codec.version>
-        <druid.version>1.1.0</druid.version>
-        <mybatis-spring-boot-starter.version>1.3.0</mybatis-spring-boot-starter.version>
-        <mapper-spring-boot-starter.version>1.1.0</mapper-spring-boot-starter.version>
-        <pagehelper-spring-boot-starter.version>1.1.0</pagehelper-spring-boot-starter.version>
-        <mybatis-generator-core.version>1.3.2</mybatis-generator-core.version>
-        <ojdbc8.version>12.2.0.1</ojdbc8.version>
-        <commons-lang3.version>3.4</commons-lang3.version>
+        <mybatis-generator-core.version>1.3.7</mybatis-generator-core.version>
+        <mybatis.verion>3.4.2</mybatis.verion>
+        <mapper-spring-boot-starter.version>2.0.4</mapper-spring-boot-starter.version>
+
+        <gson.version>2.8.1</gson.version>
+
+        <dubbo-spring-boot-starter.version>2.0.0</dubbo-spring-boot-starter.version>
+        <zookeeper.version>3.4.13</zookeeper.version>
+        <zkclient.version>0.10</zkclient.version>
+
+        <memberCenter-dubbo-api.version>1.0.0-SNAPSHOT</memberCenter-dubbo-api.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring.boot.version}</version>
-            </dependency>
-            <dependency>
+                <!-- Import dependency management from Spring Boot -->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring.boot.version}</version>
+                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- 内部项目自引用 -->
             <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${commons-lang3.version}</version>
+                <groupId>com.jcc.bi</groupId>
+                <artifactId>bi-web</artifactId>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.oracle</groupId>
-                <artifactId>ojdbc8</artifactId>
-                <version>${ojdbc8.version}</version>
+                <groupId>com.jcc.bi</groupId>
+                <artifactId>bi-data-service</artifactId>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <scope>test</scope>
+                <groupId>com.jcc.bi</groupId>
+                <artifactId>bi-dubbo-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- 云科自研jar -->
+            <dependency>
+                <groupId>com.isesol.memberCenter</groupId>
+                <artifactId>memberCenter-dubbo-api</artifactId>
+                <version>${memberCenter-dubbo-api.version}</version>
+            </dependency>
+
+            <!-- 第三方jar依赖 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -77,14 +87,29 @@
                 <version>${druid.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-            </dependency>
-            <!--Mybatis Spring-->
-            <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper</artifactId>
+                <version>${mapper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>${mybatis-generator-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.verion}</version>
             </dependency>
             <!--Mapper-->
             <dependency>
@@ -92,38 +117,80 @@
                 <artifactId>mapper-spring-boot-starter</artifactId>
                 <version>${mapper-spring-boot-starter.version}</version>
             </dependency>
-            <!--Pagehelper-->
             <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>${pagehelper-spring-boot-starter.version}</version>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
             </dependency>
-            <!--mysql-->
             <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.version}</version>
+                <groupId>com.alibaba.spring.boot</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-spring-boot-starter.version}</version>
             </dependency>
-            <!--Mybatis-->
             <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>${mybatis.version}</version>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
             </dependency>
-            <!--mybatis-spring-->
+            <!-- https://mvnrepository.com/artifact/com.101tec/zkclient -->
             <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-spring</artifactId>
-                <version>${mybatis.spring.version}</version>
-            </dependency>
-            <!-- Mybatis Generator -->
-            <dependency>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-core</artifactId>
-                <version>${mybatis-generator-core.version}</version>
-                <scope>compile</scope>
-                <optional>true</optional>
+                <groupId>com.101tec</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <url>https://repo.spring.io/snapshot</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <url>https://repo.spring.io/milestone</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <build>
+        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+            <plugins>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.0.0</version>
+                </plugin>
+                <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.7.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.20.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+                <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-war-plugin -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.2.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

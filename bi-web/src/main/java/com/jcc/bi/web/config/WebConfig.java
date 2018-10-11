@@ -1,5 +1,8 @@
 package com.jcc.bi.web.config;
 
+import com.jcc.bi.web.interceptor.DefaultInterceptor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.*;
 
@@ -9,8 +12,8 @@ import org.springframework.web.servlet.config.annotation.*;
  */
 @Configuration
 @EnableWebMvc
-public class WebConfig extends WebMvcConfigurerAdapter {
-
+public class WebConfig implements WebMvcConfigurer {
+    static Logger logger = LoggerFactory.getLogger(WebConfig.class);
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -20,12 +23,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**");
-        super.addCorsMappings(registry);
     }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new AuthInterceptor()).addPathPatterns("/**");
-        super.addInterceptors(registry);
+        registry.addWebRequestInterceptor(new DefaultInterceptor()).addPathPatterns("/**");
     }
 }

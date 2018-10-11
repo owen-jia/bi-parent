@@ -1,3 +1,6 @@
+debug: true
+trace: false
+
 spring:
   profiles: dev
   datasource:
@@ -6,6 +9,10 @@ spring:
       password: ${MYSQL_PASSWORD:123456}
       driver-class-name: com.mysql.jdbc.Driver
       type: com.alibaba.druid.pool.DruidDataSource
+  dubbo:
+    registry:
+      address: zookeeper://192.168.20.241:2181
+
 logging:
   level:
     org.apache.ibatis: debug

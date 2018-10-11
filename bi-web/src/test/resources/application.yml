@@ -7,19 +7,3 @@ logging:
     springframework.web: debug
     org.springboot.sample: debug
 
-mybatis:
-  type-aliases-package: com.jcc.bi.web.model.dao
-  mapper-locations: classpath:mapper/*.xml
-
-mapper:
-  mappers: com.jcc.bi.web.util.MyMapper
-  not-empty: false
-  identity: MYSQL
-
-#pagehelper
-pagehelper:
-  helperDialect: mysql
-  reasonable: true
-  supportMethodsArguments: true
-  params: count=countSql
-

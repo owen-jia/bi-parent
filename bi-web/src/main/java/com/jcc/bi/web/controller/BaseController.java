@@ -1,7 +1,8 @@
 package com.jcc.bi.web.controller;
 
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -10,6 +11,6 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class BaseController {
 
-    protected final static Logger logger = Logger.getLogger(BaseController.class);
+    static Logger logger = LoggerFactory.getLogger(BaseController.class);
 
 }

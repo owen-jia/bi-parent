@@ -1,19 +1,18 @@
 package com.jcc.bi.data;
 
-import oracle.jdbc.pool.OracleDataSource;
-
 import java.sql.*;
 
 public class JdbcTest {
 
     Connection test2() throws SQLException {
-        OracleDataSource oracleDataSource = new OracleDataSource();
-        oracleDataSource.setURL("jdbc:oracle:thin:@//120.55.42.117:1251/jucaicat");
-        oracleDataSource.setUser("bi");
-        oracleDataSource.setPassword("bi123");
-
-        Connection connection = oracleDataSource.getConnection();
-        return connection;
+//        OracleDataSource oracleDataSource = new OracleDataSource();
+//        oracleDataSource.setURL("jdbc:oracle:thin:@//120.55.42.117:1251/jucaicat");
+//        oracleDataSource.setUser("bi");
+//        oracleDataSource.setPassword("bi123");
+//
+//        Connection connection = oracleDataSource.getConnection();
+//        return connection;
+        return null;
     }
 
     Connection test1() throws Exception {
