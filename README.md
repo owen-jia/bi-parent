@@ -29,6 +29,7 @@ mybatis-generator集成在test目录下，执行命令： mvn mybatis-generator:
 * mysql
 * druid
 * pagehelper
+* mybatis-mapper
 * spring framework: mvc & common
 * dubbo-spring-boot-starter
 
