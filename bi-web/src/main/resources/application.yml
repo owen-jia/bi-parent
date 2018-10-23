@@ -5,7 +5,7 @@ server:
 
 spring:
   profiles:
-    active: ${ENV:dev}
+    active: ${ENV:local}
   application:
     name: ts-bi-service
   banner:

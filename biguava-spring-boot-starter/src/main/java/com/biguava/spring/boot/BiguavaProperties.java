@@ -1,10 +1,15 @@
 package com.biguava.spring.boot;
 
+import com.biguava.spring.boot.model.Hello;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+
 /**
  * 配置
  * @author: Owen Jia
  * @time: 2018/10/22 18:47
  */
+@ConfigurationProperties(prefix = "biguava",ignoreInvalidFields = true)
 public class BiguavaProperties {
     /**
      * 是否启动
@@ -21,6 +26,19 @@ public class BiguavaProperties {
      * 单位：分钟
      */
     int monitorTime;
+
+    /**
+     * hello模块配置
+     */
+    Hello hello;
+
+    public Hello getHello() {
+        return hello;
+    }
+
+    public void setHello(Hello hello) {
+        this.hello = hello;
+    }
 
     public boolean isEnabled() {
         return enabled;

@@ -1,6 +1,0 @@
-# 组件配置
-biguava.keys: 1234asdf
-biguava.desc: i am biguava sample
-biguava.enabled: true
-# spring config
-debug: true

@@ -1,0 +1,7 @@
+# 组件配置
+biguava.enabled: true
+biguava.level: height
+biguava.monitorTime: 121
+# hello模块配置
+biguava.hello.keys: 1234asdf
+biguava.hello.desc: i am biguava sample

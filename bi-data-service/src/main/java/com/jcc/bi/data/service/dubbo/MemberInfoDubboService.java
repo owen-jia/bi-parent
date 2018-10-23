@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class MemberInfoDubboService {
 
-    @Reference
+    @Reference(check = false)
     IMemberInfoService memberInfoService;
 
     public void test1(){

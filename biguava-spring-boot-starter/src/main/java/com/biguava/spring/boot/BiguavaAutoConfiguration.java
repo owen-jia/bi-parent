@@ -1,35 +1,40 @@
 package com.biguava.spring.boot;
 
-import com.biguava.spring.boot.model.SayHello;
 import com.biguava.spring.boot.service.impl.SayHelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
  * 自动配置-配置类
+ * ConditionalOn* 自动配置启动条件
+ * ConditionalOnProperty 通过判断biguava.enabled是否等于true启动自动配置
+ * ConditionalOnBean 通过判断EnableBiguavaConfiguration注解是否使用启动自动配置
+ * ConditionalOnClass 判断类
  * @author: Owen Jia
  * @time: 2018/10/22 18:20
  */
 @Configuration
-@EnableConfigurationProperties({SayHello.class})
-@ConditionalOnClass({SayHelloService.class})
-@ConditionalOnProperty(prefix = "biguava",value = "true",matchIfMissing = true)
+@EnableConfigurationProperties(BiguavaProperties.class)
+//@ConditionalOnClass({SayHelloService.class})
+@ConditionalOnBean(annotation = EnableBiguavaConfiguration.class)
+//@ConditionalOnProperty(prefix = "biguava",value = "enabled",matchIfMissing = true)
 public class BiguavaAutoConfiguration {
 
-    @Autowired
-    SayHello sayHello;
+    @Autowired(required = false)
+    BiguavaProperties biguavaProperties;
 
     @Bean
     @ConditionalOnMissingBean(SayHelloService.class)
     public SayHelloService sayHelloService(){
-        System.out.println("Execute Create New Bean:SayHelloService");
+        System.out.println("biguava.enabled= " + biguavaProperties.isEnabled());
+        System.out.println("Execute Create New Bean: SayHelloService");
+
         SayHelloService sayHelloService = new SayHelloService();
-        sayHelloService.setEnabled(sayHello.isEnabled());
+        sayHelloService.setBiguavaProperties(biguavaProperties);
         return sayHelloService;
     }
 }

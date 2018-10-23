@@ -55,6 +55,10 @@
             <artifactId>bi-data-service</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.jcc.bi</groupId>
+            <artifactId>biguava-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.alibaba.spring.boot</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
         </dependency>
