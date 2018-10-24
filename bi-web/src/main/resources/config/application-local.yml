@@ -13,6 +13,9 @@ spring:
     registry:
       address: zookeeper://zk01.dev:2181
     protocol: dubbo
+  devtools:
+    restart:
+      enabled: true
 
 logging:
   level:
