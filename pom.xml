@@ -153,6 +153,14 @@
         </dependencies>
     </dependencyManagement>
 
+    <developers>
+        <developer>
+            <id>Owen Jia</id>
+            <name>Owen Jia</name>
+            <email>owen-jia@outlook.com</email>
+        </developer>
+    </developers>
+
     <pluginRepositories>
         <pluginRepository>
             <id>spring-snapshots</id>
@@ -163,6 +171,15 @@
             <url>https://repo.spring.io/milestone</url>
         </pluginRepository>
     </pluginRepositories>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
 
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

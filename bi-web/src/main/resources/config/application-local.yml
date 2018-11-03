@@ -25,7 +25,7 @@ logging:
 
 # biguava组件配置
 biguava:
-  enabled: false
+  enabled: true
   level: height
   monitorTime: 121
   hello:
