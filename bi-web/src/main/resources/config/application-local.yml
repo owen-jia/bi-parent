@@ -25,10 +25,12 @@ logging:
 
 # biguava组件配置
 biguava:
-  enabled: true
   level: height
   monitorTime: 121
   hello:
     keys: 1234asdf
     desc: i am biguava sample
+  print:
+    enabled: true
+    cycleTime: 5 # 单位:s
 

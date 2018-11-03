@@ -7,12 +7,12 @@ import com.biguava.spring.boot.BiguavaProperties;
  * @author: Owen Jia
  * @time: 2018/10/22 18:18
  */
-public class SayHelloService {
+public class SayHelloServiceImpl {
 
     BiguavaProperties biguavaProperties;
 
     public String say() {
-        return "SayHelloService Starter ===============>>>>" + biguavaProperties.getHello().toString();
+        return "SayHelloServiceImpl Starter ===============>>>>" + biguavaProperties.getHello().toString();
     }
 
     public BiguavaProperties getBiguavaProperties() {

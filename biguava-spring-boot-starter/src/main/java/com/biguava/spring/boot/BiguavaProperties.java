@@ -2,7 +2,6 @@ package com.biguava.spring.boot;
 
 import com.biguava.spring.boot.model.Hello;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * 配置
@@ -11,10 +10,6 @@ import org.springframework.context.annotation.Configuration;
  */
 @ConfigurationProperties(prefix = "biguava",ignoreInvalidFields = true)
 public class BiguavaProperties {
-    /**
-     * 是否启动
-     */
-    boolean enabled;
     /**
      * 监控级别：
      * height： 高级
@@ -32,20 +27,46 @@ public class BiguavaProperties {
      */
     Hello hello;
 
+    /**
+     * print模块
+     */
+    Print print;
+
+    public static class Print{
+        boolean enabled;
+        int cycleTime;
+
+        public boolean isEnabled() {
+            return enabled;
+        }
+
+        public void setEnabled(boolean enabled) {
+            this.enabled = enabled;
+        }
+
+        public int getCycleTime() {
+            return cycleTime;
+        }
+
+        public void setCycleTime(int cycleTime) {
+            this.cycleTime = cycleTime;
+        }
+    }
+
+    public Print getPrint() {
+        return print;
+    }
+
+    public void setPrint(Print print) {
+        this.print = print;
+    }
+
     public Hello getHello() {
         return hello;
     }
 
     public void setHello(Hello hello) {
         this.hello = hello;
-    }
-
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
     }
 
     public String getLevel() {

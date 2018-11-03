@@ -1,6 +1,6 @@
 package com.biguava.spring.boot;
 
-import com.biguava.spring.boot.service.impl.SayHelloService;
+import com.biguava.spring.boot.service.impl.SayHelloServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class BiguavaAppTest {
 
     @Autowired(required = false)
-    SayHelloService sayHelloService;
+    SayHelloServiceImpl sayHelloService;
 
     @Test
     public void test1(){

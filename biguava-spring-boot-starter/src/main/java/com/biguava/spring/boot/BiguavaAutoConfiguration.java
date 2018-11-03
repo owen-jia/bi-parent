@@ -1,9 +1,12 @@
 package com.biguava.spring.boot;
 
 import com.biguava.spring.boot.annotation.EnableBiguavaConfiguration;
-import com.biguava.spring.boot.service.impl.SayHelloService;
+import com.biguava.spring.boot.service.impl.PrintServiceImpl;
+import com.biguava.spring.boot.service.impl.SayHelloServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,19 +23,30 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableConfigurationProperties(BiguavaProperties.class)
 @ConditionalOnBean(annotation = EnableBiguavaConfiguration.class)
-//@ConditionalOnProperty(prefix = "biguava",value = "enabled",matchIfMissing = true)
 public class BiguavaAutoConfiguration {
 
     @Autowired(required = false)
     BiguavaProperties biguavaProperties;
 
     @Bean
-    public SayHelloService sayHelloService(){
-        System.out.println("biguava.enabled= " + biguavaProperties.isEnabled());
-        System.out.println("Execute Create New Bean: SayHelloService");
-
-        SayHelloService sayHelloService = new SayHelloService();
+    @ConditionalOnMissingBean(SayHelloServiceImpl.class)
+    public SayHelloServiceImpl sayHelloService(){
+        System.out.println("SayHelloService bean was matched");
+        System.out.println("Execute Create New Bean: SayHelloServiceImpl");
+        SayHelloServiceImpl sayHelloService = new SayHelloServiceImpl();
         sayHelloService.setBiguavaProperties(biguavaProperties);
         return sayHelloService;
+    }
+
+    @Bean
+    @ConditionalOnProperty(prefix = "biguava.print",value = "enabled",matchIfMissing = true)
+    public PrintServiceImpl printServiceImplByPro(){
+        System.out.println("PrintServiceImpl:enabled= " + biguavaProperties.getPrint().isEnabled());
+        System.out.println("Execute Create New Bean: PrintServiceImpl");
+        PrintServiceImpl printService = new PrintServiceImpl();
+        printService.setPrintCycleTime(biguavaProperties.getPrint().getCycleTime());
+        printService.setPrintEnabled(biguavaProperties.getPrint().isEnabled());
+        printService.printTime();
+        return printService;
     }
 }

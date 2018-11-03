@@ -1,6 +1,6 @@
 package com.jcc.bi.web.controller;
 
-import com.biguava.spring.boot.service.impl.SayHelloService;
+import com.biguava.spring.boot.service.impl.SayHelloServiceImpl;
 import com.jcc.bi.data.service.TestService;
 import com.jcc.bi.data.service.dubbo.MemberInfoDubboService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class DemoController extends BaseController{
     @Autowired(required = false)
     MemberInfoDubboService memberInfoDubboService;
     @Autowired(required = false)
-    SayHelloService sayHelloService;
+    SayHelloServiceImpl sayHelloService;
 
     @RequestMapping(value = "test1",method = RequestMethod.GET)
     @ResponseBody
