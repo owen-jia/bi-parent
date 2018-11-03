@@ -18,7 +18,6 @@ import org.springframework.context.annotation.Configuration;
  * ConditionalOnBean 通过判断EnableBiguavaConfiguration注解是否使用启动自动配置
  * ConditionalOnClass 判断类文件是否存在
  * @author: Owen Jia
- * @time: 2018/10/22 18:20
  */
 @Configuration
 @EnableConfigurationProperties(BiguavaProperties.class)

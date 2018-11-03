@@ -2,7 +2,7 @@ package com.biguava.spring.boot.model;
 
 /**
  * @author: Owen Jia
- * @time: 2018/10/22 18:11
+ * @time: 2018/10/12 18:11
  */
 public class Hello {
 

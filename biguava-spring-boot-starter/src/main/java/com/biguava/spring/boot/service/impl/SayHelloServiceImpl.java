@@ -5,7 +5,6 @@ import com.biguava.spring.boot.BiguavaProperties;
 /**
  * hello模块提供的服务
  * @author: Owen Jia
- * @time: 2018/10/22 18:18
  */
 public class SayHelloServiceImpl {
 

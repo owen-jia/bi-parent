@@ -6,7 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * 配置
  * @author: Owen Jia
- * @time: 2018/10/22 18:47
+ * @time: 2018/10/12 18:47
  */
 @ConfigurationProperties(prefix = "biguava",ignoreInvalidFields = true)
 public class BiguavaProperties {
