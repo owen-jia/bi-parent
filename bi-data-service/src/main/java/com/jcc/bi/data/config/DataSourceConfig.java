@@ -1,5 +1,6 @@
 package com.jcc.bi.data.config;
 
+import org.springframework.boot.autoconfigure.jdbc.JdbcProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -22,4 +23,5 @@ public class DataSourceConfig {
     public DataSource test2(){
         return null;
     }
+
 }
