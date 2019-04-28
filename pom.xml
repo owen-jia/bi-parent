@@ -9,7 +9,7 @@
         <module>bi-web</module>
         <module>bi-data-service</module>
         <module>bi-dubbo-api</module>
-        <module>biguava-spring-boot-starter</module>
+        <module>bi-guava-spring-boot-starter</module>
         <module>bi-commons</module>
     </modules>
     <packaging>pom</packaging>
@@ -72,7 +72,7 @@
             </dependency>
             <dependency>
                 <groupId>com.ts.bi</groupId>
-                <artifactId>biguava-spring-boot-starter</artifactId>
+                <artifactId>bi-guava-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
