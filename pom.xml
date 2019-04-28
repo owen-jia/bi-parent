@@ -161,7 +161,7 @@
 
     <developers>
         <developer>
-            <id>Owen Jia</id>
+            <id>001</id>
             <name>Owen Jia</name>
             <email>owen-jia@outlook.com</email>
             <roles>
@@ -189,6 +189,24 @@
             <comments>A business-friendly OSS license</comments>
         </license>
     </licenses>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+        </profile>
+        <profile>
+            <id>dev</id>
+        </profile>
+        <profile>
+            <id>qa</id>
+        </profile>
+        <profile>
+            <id>pre</id>
+        </profile>
+        <profile>
+            <id>prod</id>
+        </profile>
+    </profiles>
 
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
