@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <artifactId>bi-parent</artifactId>
-        <groupId>com.jcc.bi</groupId>
+        <groupId>com.ts.bi</groupId>
         <version>2.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -12,7 +12,7 @@
     <url>http://maven.apache.org</url>
 
     <properties>
-        <start-class>com.jcc.bi.web.WebApp</start-class>
+        <start-class>com.ts.bi.web.WebApp</start-class>
     </properties>
 
     <build>
@@ -51,11 +51,11 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.jcc.bi</groupId>
+            <groupId>com.ts.bi</groupId>
             <artifactId>bi-data-service</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.jcc.bi</groupId>
+            <groupId>com.ts.bi</groupId>
             <artifactId>biguava-spring-boot-starter</artifactId>
         </dependency>
         <dependency>

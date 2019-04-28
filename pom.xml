@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.jcc.bi</groupId>
+    <groupId>com.ts.bi</groupId>
     <artifactId>bi-parent</artifactId>
     <version>2.0</version>
     <modules>
@@ -10,11 +10,12 @@
         <module>bi-data-service</module>
         <module>bi-dubbo-api</module>
         <module>biguava-spring-boot-starter</module>
+        <module>bi-commons</module>
     </modules>
     <packaging>pom</packaging>
 
     <name>bi-parent</name>
-    <url>http://maven.apache.org</url>
+    <url>https://github.com/owen-jia</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -55,22 +56,22 @@
 
             <!-- 内部项目自引用 -->
             <dependency>
-                <groupId>com.jcc.bi</groupId>
+                <groupId>com.ts.bi</groupId>
                 <artifactId>bi-web</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jcc.bi</groupId>
+                <groupId>com.ts.bi</groupId>
                 <artifactId>bi-data-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jcc.bi</groupId>
+                <groupId>com.ts.bi</groupId>
                 <artifactId>bi-dubbo-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.jcc.bi</groupId>
+                <groupId>com.ts.bi</groupId>
                 <artifactId>biguava-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -158,6 +159,9 @@
             <id>Owen Jia</id>
             <name>Owen Jia</name>
             <email>owen-jia@outlook.com</email>
+            <roles>
+                <role>owener</role>
+            </roles>
         </developer>
     </developers>
 

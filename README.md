@@ -1,8 +1,9 @@
 ## bi-parent v2.0 基础构建  
 
-Web应用基础构建项目，减少重复造轮子  
+Web应用基础框架，适合在此基础上直接构建业务项目，减少重复造轮子
 
 > jdk 1.8  
+> author: owen jia  
 > sping-boot 2.0.5 基础上构建  
 > maven 包管理工具  
 

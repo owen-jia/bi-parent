@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <artifactId>bi-parent</artifactId>
-        <groupId>com.jcc.bi</groupId>
+        <groupId>com.ts.bi</groupId>
         <version>2.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -14,8 +14,8 @@
         <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
         <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
         <targetXMLPackage>mapper</targetXMLPackage>
-        <targetMapperPackage>com.jcc.bi.data.dao.mapper</targetMapperPackage>
-        <targetModelPackage>com.jcc.bi.data.dao.po</targetModelPackage>
+        <targetMapperPackage>com.ts.bi.data.dao.mapper</targetMapperPackage>
+        <targetModelPackage>com.ts.bi.data.dao.po</targetModelPackage>
     </properties>
 
     <dependencies>
@@ -72,7 +72,7 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.jcc.bi</groupId>
+            <groupId>com.ts.bi</groupId>
             <artifactId>bi-dubbo-api</artifactId>
         </dependency>
         <dependency>

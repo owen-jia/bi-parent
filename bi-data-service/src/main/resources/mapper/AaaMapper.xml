@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.jcc.bi.data.dao.mapper.AaaMapper" >
-  <resultMap id="BaseResultMap" type="com.jcc.bi.data.dao.po.Aaa" >
+<mapper namespace="com.ts.bi.data.dao.mapper.AaaMapper" >
+  <resultMap id="BaseResultMap" type="com.ts.bi.data.dao.po.Aaa" >
     <!--
       WARNING - @mbggenerated
     -->

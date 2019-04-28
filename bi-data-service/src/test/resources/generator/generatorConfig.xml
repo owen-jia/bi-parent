@@ -35,7 +35,7 @@
         <property name="javaFileEncoding" value="UTF-8"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="com.jcc.bi.data.util.MyMapper"/>
+            <property name="mappers" value="com.ts.bi.data.util.MyMapper"/>
         </plugin>
 
         <commentGenerator>
