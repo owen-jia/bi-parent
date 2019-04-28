@@ -1,4 +1,4 @@
-## bi-parent v2.0 基础构建  
+## bi-parent v2.0.1 基础构建  
 
 Web应用基础框架，适合在此基础上直接构建业务项目，减少重复造轮子
 
@@ -22,7 +22,10 @@ mybatis-generator集成在test目录下，执行命令： mvn mybatis-generator:
 4. bi-dubbo-api dubbo接口集  
 演示dubbo api，实际工作引入自己的api包
 
-5. biguava-spring-boot-starter 自动配置sample
+5. bi-guava-spring-boot-starter 自动配置sample
+
+6. bi-commons 常用工具集  
+封装常用的tools和一些基本项目工具方法
 
 ## 技术集
 
