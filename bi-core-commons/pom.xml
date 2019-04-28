@@ -9,12 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>bi-commons</artifactId>
+    <artifactId>bi-core-commons</artifactId>
 
-    <name>bi-commons</name>
+    <name>bi-core-commons</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
-    <description>此项目对大量常用的工具类进行归并收集</description>
+    <description>工具包集</description>
 
     <properties>
 

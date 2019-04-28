@@ -10,7 +10,8 @@
         <module>bi-data-service</module>
         <module>bi-dubbo-api</module>
         <module>bi-guava-spring-boot-starter</module>
-        <module>bi-commons</module>
+        <module>bi-core-arch</module>
+        <module>bi-core-commons</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -75,7 +76,11 @@
                 <artifactId>bi-guava-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.ts.bi</groupId>
+                <artifactId>bi-core-arch</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- 云科自研jar -->
             <dependency>
                 <groupId>com.isesol.memberCenter</groupId>
