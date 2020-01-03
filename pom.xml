@@ -10,8 +10,7 @@
         <module>bi-data-service</module>
         <module>bi-dubbo-api</module>
         <module>bi-guava-spring-boot-starter</module>
-        <module>bi-core-arch</module>
-        <module>bi-core-commons</module>
+        <module>bi-commons</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -78,7 +77,7 @@
             </dependency>
             <dependency>
                 <groupId>com.github.owen-jia</groupId>
-                <artifactId>bi-core-arch</artifactId>
+                <artifactId>bi-commons</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- 云科自研jar -->

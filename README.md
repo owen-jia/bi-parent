@@ -2,10 +2,12 @@
 
 Web应用基础框架，适合在此基础上直接构建业务项目，减少重复造轮子
 
-> jdk 1.8  
+> jdk 1.8     
+> spring-boot 2.0.6 基础上构建  
+> spring 5.0.10 上下文管理
+> maven 3.5.4 包管理工具   
 > author: owen jia  
-> sping-boot 2.0.5 基础上构建  
-> maven 包管理工具  
+> email: owen-jia@outlook.com
 
 ## 模块介绍
 

@@ -8,8 +8,14 @@
         <version>2.1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>bi-core-arch</artifactId>
-    <packaging>jar</packaging>
 
-    <name>bi-core-arch</name>
+    <artifactId>bi-commons</artifactId>
+    <description>项目开发中常用的工具包集</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+    </dependencies>
 </project>

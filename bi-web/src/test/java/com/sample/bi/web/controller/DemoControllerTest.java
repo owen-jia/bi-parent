@@ -1,7 +1,6 @@
 package com.sample.bi.web.controller;
 
 import com.sample.bi.web.WebAppTest;
-import com.ts.bi.web.WebAppTest;
 import org.junit.Test;
 import org.springframework.test.context.web.WebAppConfiguration;
 

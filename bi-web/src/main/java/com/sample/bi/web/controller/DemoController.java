@@ -1,8 +1,8 @@
 package com.sample.bi.web.controller;
 
 import com.sample.biguava.boot.service.impl.SayHelloServiceImpl;
-import com.ts.bi.data.service.TestService;
-import com.ts.bi.data.service.dubbo.MemberInfoDubboService;
+import com.sample.bi.data.service.TestService;
+import com.sample.bi.data.service.dubbo.MemberInfoDubboService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
