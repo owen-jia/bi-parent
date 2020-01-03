@@ -42,10 +42,10 @@ mybatis-generator集成在test目录下，执行命令： mvn mybatis-generator:
 
 ## 文档链接
 
-1. spring-boot 2.0.5 文档地址：   
-https://docs.spring.io/spring-boot/docs/2.0.5.RELEASE/reference/htmlsingle/  
-
-2. dubbo-spring-boot-starter 2.0.0 文档地址：  
+1. spring-boot 文档地址    
+https://docs.spring.io/spring-boot/docs/2.0.6.RELEASE/reference/htmlsingle/  
+ 
+2. dubbo-spring-boot-starter 2.0.0 文档地址    
 https://github.com/owen-jia/dubbo-spring-boot-starter
 
 
