@@ -33,7 +33,7 @@
         <mybatis.verion>3.4.2</mybatis.verion>
         <mapper-spring-boot-starter.version>2.0.4</mapper-spring-boot-starter.version>
 
-        <gson.version>2.8.1</gson.version>
+        <gson.version>2.8.9</gson.version>
         <guava.verion>20.0</guava.verion>
 
         <dubbo-spring-boot-starter.version>2.0.0</dubbo-spring-boot-starter.version>
